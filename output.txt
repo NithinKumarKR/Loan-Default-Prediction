@@ -1,1 +1,0 @@
-[Row(trans_status_x='Y', changer=1786157), Row(trans_status_x='N', changer=90330), Row(trans_status_x='3DS_LOA_SER_CACC_020200_00468', changer=5557), Row(trans_status_x='U', changer=3243), Row(trans_status_x='https://paypal.com/', changer=171)]
