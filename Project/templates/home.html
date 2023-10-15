@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <form action="/predict" method="POST">
+
+        <div class="content">
+            <h1 style="text-align: center">Medical Cost Estimated</h1>
+
+            <!-- Region Selector -->
+            <div class="form">
+                <label for="region">Choose a Region</label>
+                <select id="region" name="region">
+                    <option value="southeast">Southeast</option>
+                    <option value="southwest">Southwest</option>
+                    <option value="northwest">Northwest</option>
+                    <option value="northeast">Northeast</option>
+                </select>
+            </div>
+
+            <!-- Gender Selector -->
+            <div class="form">
+                <label for="gender">Choose a Gender</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <!-- Smoker Selector -->
+            <div class="form">
+                <label for="smoker">Smoker</label>
+                <select id="smoker" name="smoker">
+                    <option value="yes">Non-smoker</option>
+                    <option value="no">Smoker</option>
+                </select>
+            </div>
+
+            <!-- Other Input Fields -->
+            <div class="input-row">
+                <label for="age">Please enter the Current Age in Years</label>
+                <input type="text" name="age" id="age">
+            </div>
+
+            <div class="input-row">
+                <label for="bmi">Please enter the Current BMI</label>
+                <input type="text" name="bmi" id="bmi">
+            </div>
+
+            <div class="input-row">
+                <label for="children">Please enter the Number of Children</label>
+                <input type="text" name="children" id="children">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="input-row" style="text-align: center;">
+                <input type="submit" value="Click to Predict" style="font-size: 20px; margin: 10px auto;">
+            </div>
+
+            <!-- Extra Lines -->
+            <div style="margin-top: 20px;">
+                <p>If you encounter any issues or have questions, please feel free to reach out.</p>
+                <p>Email: nithin@mrp.com</p>
+                <p>Mobile: 9834543423</p>
+                <p>Facebook: nithin@facebook.com</p>
+                <p>Address: # 17, Krishna Grand Outer Ring Road, Junction</p>
+            </div>
+
+        </div>
+    </form>
+</body>
+
+</html>
