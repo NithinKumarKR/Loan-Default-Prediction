@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predicted</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Updated line -->
+</head>
+
+<body>
+    <div class="table-users">
+        <div class="header">Medical Cost Estimated</div>
+        <div class="header">Welcome back</div>
+
+        <div class="input-row">
+            <div style="text-align: center">{{ result }}</div>
+        </div>
+
+        <div class="input-row" style="text-align:center">
+            {% for i in noc %}
+            <div class="table-users">{{ i }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="table-users">
+            <div class="folter" style="text-align: center">You can pay though Cashee/PhonePee/GooglePee</div>
+        </div>
+
+        <!-- Extra Lines -->
+        <div style="margin-top: 20px;">
+            <p> If you encounter any issues or have questions, please feel free to reach out.</p>
+            <p> Email: nithin@mrp.com</p>
+            <p> Mobile: 9834543423</p>
+            <p> Facebook: nithin@facebook.com</p>
+            <p> Address: # 17, Krishna Grand Outer Ring Road, Junction</p>
+        </div>
+    </div>
+</body>
+
+</html>
