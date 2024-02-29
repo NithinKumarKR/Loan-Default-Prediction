@@ -13,9 +13,9 @@ app=Flask(__name__)
 
 #import ridge repressor and standard scaler pickel
 
-ridge_model=pickle.load(open('/Users/nithinkumar/Desktop/Personal Studies/Data-course/Project/ridge.pkl','rb'))
+ridge_model=pickle.load(open('/Users/nithinkumar/Desktop/Learning_projects/Medical_Cost_Prediction/ridge.pkl','rb'))
                              
-Standard_Scaler=pickle.load(open('/Users/nithinkumar/Desktop/Personal Studies/Data-course/Project/scaler.pkl','rb'))
+Standard_Scaler=pickle.load(open('/Users/nithinkumar/Desktop/Learning_projects/Medical_Cost_Prediction/scaler.pkl','rb'))
 
 @app.route('/')
 
