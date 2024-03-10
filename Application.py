@@ -26,10 +26,7 @@ def hello_world():
     #return "fjcnkfcnkjdfnckjdnckjdnckjnckd"
     if request.method == 'POST':
         name = request.form.get('name')
-        #print(name)
         return render_template('index.html')
-    else:
-        return render_template('home.html')
     
 #print(user_name)
 
