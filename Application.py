@@ -13,15 +13,23 @@ app=Flask(__name__)
 
 #import ridge repressor and standard scaler pickel
 
-ridge_model=pickle.load(open('/Users/nithinkumar/Desktop/Personal Studies/Data-course/Project/ridge.pkl','rb'))
+ridge_model=pickle.load(open('/Users/nithinkumar/Desktop/Learning_projects/Medical_Cost_Prediction/ridge.pkl','rb'))
                              
-Standard_Scaler=pickle.load(open('/Users/nithinkumar/Desktop/Personal Studies/Data-course/Project/scaler.pkl','rb'))
+Standard_Scaler=pickle.load(open('/Users/nithinkumar/Desktop/Learning_projects/Medical_Cost_Prediction/scaler.pkl','rb'))
 
-@app.route('/')
+user_name = 'Unknown User'
+
+@app.route('/welcome',methods=['GET','POST'])
+
 
 def hello_world():
     #return "fjcnkfcnkjdfnckjdnckjdnckjnckd"
-    return render_template('index.html')
+    if request.method == 'POST':
+        name = request.form.get('name')
+        return render_template('index.html')
+    
+#print(user_name)
+
 
 gender_status={'male': 0, 'female': 1}
 
@@ -30,6 +38,8 @@ region_status={'southeast': 0, 'southwest': 1, 'northeast': 2, 'northwest': 3}
 smoking={'yes': 1, 'no': 0}
 
 @app.route('/predict',methods=['GET','POST'])
+
+
 def predict_charge():
     
     if request.method == 'POST':
@@ -57,7 +67,7 @@ def predict_charge():
         #return render_template('home.html')
 
     else:
-        return render_template('home.html')
+        return render_template('home.html',name=user_name)
 
     
 if __name__=="__main__":
